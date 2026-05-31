@@ -1,0 +1,109 @@
+Crie um layout para a página de planos de preços.
+Crie um aplicativo que seja funcionalmente semelhante a este projeto de exemplo . Tente não copiar o projeto de exemplo; dê a ele seu próprio estilo pessoal.
+
+Objetivo: Cumprir as histórias de usuário abaixo e passar em todos os testes para concluir o laboratório.
+
+Histórias de Usuário:
+
+Sua página deve conter um h1elemento com o texto Pricing Plans.
+Sua página deve ter um divelemento com a classe pricing-containerabaixo do h1elemento.
+O .pricing-containerseletor deve ter uma displaypropriedade com o valor de flexe uma flex-wrappropriedade com o valor de wrap.
+Dentro do .pricing-containerelemento, você deve ter três divelementos com a classe pricing-cardpara representar os planos de preços.
+Um dos .pricing-cardelementos deve ter a classe basic-planalém da pricing-cardclasse.
+Um dos .pricing-cardelementos deve ter a classe pro-planalém da pricing-cardclasse.
+Um dos .pricing-cardelementos deve ter a classe premium-planalém da pricing-cardclasse.
+Seu .basic-planelemento deve conter um h2elemento com o texto Basic.
+Seu .basic-planelemento deve conter um pelemento com o texto $9/month.
+Seu .pro-planelemento deve conter um h2elemento com o texto Pro.
+Seu .pro-planelemento deve conter um pelemento com o texto $19/month.
+Seu .premium-planelemento deve conter um h2elemento com o texto Premium.
+Seu .premium-planelemento deve conter um pelemento com o texto $29/month.
+Cada um dos seus .pricing-cardelementos deve:
+Use Flexbox para empilhar o conteúdo em uma coluna e justifique o espaço entre os elementos filhos usando ` space-between.
+Defina a flexpropriedade para 0 0 200pxque ela tenha uma largura consistente e impeça que aumente ou diminua de tamanho no layout.
+Defina a borderpropriedade para 2px solid blackver como os diferentes cartões ocupam espaço.
+O .basic-planelemento deve aparecer em primeiro lugar no layout. Você deve usar a orderpropriedade para isso.
+O .pro-planelemento deve aparecer em segundo lugar no layout. Você deve usar a orderpropriedade e definir sua flex-growpropriedade para 2que ocupe mais espaço do que os outros planos.
+O .premium-planelemento deve vir por último no layout. Você deve usar a orderpropriedade para isso.
+Observação: Certifique-se de incluir o link da sua folha de estilo no seu HTML e aplicar o seu CSS.
+
+Testes:
+Esperando :1. Você deve ter um h1elemento.
+Esperando :2. Sua página deve ter um h1elemento com o texto Pricing Plans.
+Esperando :3. Você deve ter um divelemento abaixo do h1elemento.
+Esperando :4. Seu divelemento deve ter a classe pricing-container.
+Esperando :5. Você deve ter um .pricing-containerseletor.
+Esperando :6. Seu pricing-containerseletor deve ter a propriedade displaycom o valor flex.
+Esperando :7. Seu .pricing-containerseletor deve ter a propriedade flex-wrapcom o valor wrap.
+Esperando :8. Você deve ter três divelementos com a classe pricing-carddentro do .pricing-containerelemento.
+Esperando :9. Um dos seus .pricing-cardelementos deve ter a classe basic-plan.
+Esperando :10. Um dos seus .pricing-cardelementos deve ter a classe premium-plan.
+Esperando :11. Um dos seus .pricing-cardelementos deve ter a classe pro-plan.
+Esperando :12. Você deve ter um .pricing-cardseletor.
+Esperando :13. Seu .pricing-cardseletor deve ter a propriedade displaycom o valor flex.
+Esperando :14. Seu .pricing-cardseletor deve ter a propriedade flex-directioncom o valor column.
+Esperando :15. Seu .pricing-cardseletor deve ter a propriedade justify-contentcom o valor space-between.
+Esperando :16. Seu .pricing-cardseletor deve ter a propriedade flexcom o valor 0 0 200px.
+Esperando :17. Seu .pricing-cardseletor deve ter a propriedade bordercom o valor 2px solid black.
+Esperando :18. Seu .basic-planseletor deve ter a propriedade ordercom o valor 0.
+Esperando :19. Seu .basic-planelemento deve ter um h2elemento com o texto Basic.
+Esperando :20. Seu .basic-planelemento deve ter um pelemento com o texto $9/month.
+Esperando :21. Seu .pro-planelemento deve ter um h2elemento com o texto Pro.
+Esperando :22. Seu .pro-planelemento deve ter um pelemento com o texto $19/month.
+Esperando :23. Seu .pro-planelemento deve ter a propriedade ordercom o valor de 1.
+Esperando :24. Seu .pro-planelemento deve ter a propriedade flex-growcom o valor de 2.
+Esperando :25. Seu .premium-planelemento deve ter um h2elemento com o texto Premium.
+Esperando :26. Seu .premium-planelemento deve ter um pelemento com o texto $29/month.
+Esperando :27. Seu premium-planelemento deve ser o último elemento no layout e ter a propriedade ordere o valor 2.
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pricing Plans Layout Page</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Pricing Plans</h1>
+    <div class="pricing-container">
+      <div class="pricing-card basic-plan">
+        <h2>Basic</h2>
+        <p>$9/month</p>
+      </div>
+      <div class="pricing-card pro-plan">
+        <h2>Pro</h2>
+        <p>$19/month</p>
+      </div>
+      <div class="pricing-card premium-plan">
+        <h2>Premium</h2>
+        <p>$29/month</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 200px;
+  border: 2px solid black;
+}
+
+.basic-plan {
+  order: 0;
+}
+
+.pro-plan {
+  order: 1;
+  flex-grow: 2;
+}
+
+.premium-plan {
+  order: 2;
+}
