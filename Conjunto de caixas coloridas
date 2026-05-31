@@ -1,0 +1,186 @@
+Neste workshop, você praticará o uso do CSS flexbox criando um conjunto de caixas coloridas.
+Para começar, dentro do bodyelemento, adicione um headerelemento. Aninhe um h1elemento dentro do headerelemento com o texto Colored Boxes Layout.
+Agora, vincule seu styles.cssarquivo ao documento HTML.
+Agora é hora de adicionar algumas regras CSS ao styles.cssarquivo. Comece criando um seletor para o h1elemento.
+Centralize o conteúdo do h1elemento definindo sua text-alignpropriedade como center. Crie também uma margin-bottompropriedade com o valor 10pxpara adicionar margem entre a parte inferior do h1elemento e qualquer elemento HTML que esteja abaixo dele.
+Agora, adicione um divelemento com a classe flex-containerabaixo do seu header. Em seguida, crie seis divelementos com a classe boxdentro do que divvocê acabou de criar.
+Lembre-se de que um atributo de classe é frequentemente usado para apontar para um nome de classe em uma folha de estilo. Nesse caso, todos os divelementos serão estilizados igualmente de acordo com a .flex-containerdefinição .boxde estilo.
+Dentro de cada .boxelemento, adicione um h2elemento com o texto Boxseguido de um espaço e um número sequencial começando de 1.
+Agora é hora de criar os nomes das cores para as caixas. Para isso, adicione um pelemento abaixo de cada h2elemento com estes nomes de cores nesta ordem: Red, Orange, Yellow, Green, Blue, e Indigo. Uma cor para cada caixa.
+Agora você vai estilizar os divelementos com a classe box. Primeiro, crie um .boxseletor de classe e adicione a propriedade max-heightcom o valor 120pxao boxseletor de classe
+Ainda dentro do .boxseletor, adicione a propriedade colorcom o valor #000. Isso fará com que todo o texto dos .boxelementos tenha a #000cor.
+Adicione a propriedade bordercom o valor 1px solid #000ao .boxseletor. A borderpropriedade é usada para criar um contorno visível ao redor de um elemento. Ela pode ser personalizada em termos de border-width, border-style, e border-color.
+Neste caso, 1px`width` border-widthdefine a espessura da borda. solid`aspect` border-styledefine a aparência da borda (sólida, tracejada, pontilhada etc.). E #000` border-colorcolor` define a cor da borda.
+Essa displaypropriedade controla como um elemento é renderizado na página. Quando você a define com o flexvalor `true`, isso habilita o modo de layout flexbox, que permite controlar o posicionamento e o alinhamento dos itens dentro do contêiner.
+Agora adicione a propriedade displaycom o valor flexao .boxseletor.
+A flexpropriedade controla o tamanho e o comportamento dos itens dentro de um contêiner flexível. Ela é composta por três propriedades: flex-grow, flex-shrink, e flex-basis.
+Agora, adicione a flexpropriedade com o valor 1 1 100pxao .boxseletor. Isso fará com que cada caixa comece em 100px, permitindo que elas cresçam para preencher o espaço disponível ou diminuam quando necessário.
+A flex-directionpropriedade controla como os itens flexíveis são organizados dentro do seu contêiner. O valor padrão é `display: none` row, que organiza os itens horizontalmente da esquerda para a direita. Essa propriedade funciona apenas em elementos com `display: none` display: flexou ` display display: inline-flex: flex`.
+Com esse columnvalor, os itens se empilham verticalmente de cima para baixo. Outros valores possíveis são row, row-reversee column-reverse.
+Agora adicione a flex-directionpropriedade com o valor columnao .boxseletor.
+Essa align-itemspropriedade alinha os itens flexíveis ao longo do eixo transversal (perpendicular ao eixo principal).
+Agora, adicione a align-itemspropriedade com o valor centerao .boxseletor. Como a boxclasse possui `display: flex` flex-direction: column, o eixo transversal é horizontal, portanto, centeros itens serão centralizados horizontalmente dentro da caixa.
+Agora adicione a propriedade margincom o valor 10pxao .boxseletor.
+Essa font-weightpropriedade controla a espessura da fonte.
+Agora, adicione a font-weightpropriedade com um valor boldao .boxseletor.
+Adicione a propriedade font-sizecom o valor 1.125remao .boxseletor.
+Essa font-sizepropriedade especifica o tamanho do texto. Ela pode ser definida usando diferentes unidades, como pixels, em, rem, porcentagens e assim por diante, o que a torna flexível para designs responsivos.
+Neste caso, o valor utiliza remunidades relativas ao htmlelemento raiz, e não ao elemento pai. Isso significa que o tamanho da fonte permanece consistente e não é afetado pelos tamanhos dos elementos pais, tornando-o mais previsível para layouts.
+Essa border-radiuspropriedade arredonda os cantos da borda de um elemento. Você pode especificar:
+Um único valor a ser aplicado a todos os quatro cantos.
+Dois valores, sendo o primeiro para canto superior esquerdo/canto inferior direito e o segundo para canto superior direito/canto inferior esquerdo.
+Três valores, correspondentes a canto superior esquerdo, canto superior direito/inferior esquerdo e canto inferior direito.
+Quatro valores que definem o raio da borda no sentido horário, começando pelo canto superior esquerdo.
+Agora adicione a propriedade border-radiuscom o valor 5pxao .boxseletor.
+A orderpropriedade especifica a ordem de um item flexível em relação a outros itens flexíveis dentro do mesmo contêiner. Por padrão, todos os itens flexíveis têm o ordervalor `true` 0, o que significa que aparecem na ordem em que são escritos no HTML. Itens com ordervalores menores aparecem primeiro, enquanto itens com valores maiores aparecem por último.
+Adicione a propriedade ordercom o valor 0ao .boxseletor.
+Crie um .flex-containerseletor e defina a displaypropriedade com o valor flex.
+Etapa 20
+Essa flex-wrappropriedade define se os itens flexíveis são forçados a ficar em uma única linha ou se podem ser divididos em várias linhas.
+Por padrão, os itens flexíveis têm o valor `display: none` nowrap, o que significa que permanecem em uma única linha mesmo que ultrapassem os limites do contêiner. O wrapvalor `display: none`, por sua vez, faz com que os itens flexíveis quebrem para novas linhas quando não cabem na largura do contêiner, criando um layout mais flexível e responsivo.
+Para continuar, adicione a flex-wrappropriedade com o valor wrapao .flex-containerseletor de classe.
+Agora você definirá a largura e a altura do .flex-containerelemento. Para fazer isso, adicione a widthpropriedade com o valor 70%e a heightpropriedade com o valor 600px.
+Definir widthas heightpropriedades `width` e `height` definirá a quantidade de largura e altura que o divelemento assumirá de seu elemento pai, neste caso, o bodyelemento `<span>`.
+Passo 22
+Para finalizar a estilização da flex-containerclasse, adicione a paddingpropriedade com o valor de 10pxe a marginpropriedade com o valor de 20px auto.
+Lembre-se: `\begin{align} padding` adiciona espaço dentro do elemento (entre a borda e o conteúdo), enquanto `\end{align} margin` adiciona espaço fora do elemento (entre a borda e outros elementos).
+Agora você vai usar a  align-content propriedade. Essa propriedade controla o arranjo dos itens ao longo do eixo transversal. Embora o valor padrão align-contentseja stretch, as opções mais relevantes que você pode usar para align-contentsão: space-between, start, center, end, space-arounde space-evenly.
+Adicione a propriedade align-contentcom o valor space-betweenpara ver como as caixas se alinharão no .flex-containerelemento.
+Agora tente outro valor de alinhamento. Altere o align-contentvalor de space-betweenpara start.
+Com base nesse startvalor, os itens são agrupados em direção à borda inicial do contêiner de alinhamento.
+O próximo item da lista é o centervalor. Altere align-contento valor de startpara center.
+Com base no centervalor, os itens serão embalados no centro do contêiner de alinhamento.
+Agora, para ver como o endvalor funciona, altere o align-contentvalor de centerpara end.
+Com base no endvalor, os itens serão embalados até o final do contêiner de alinhamento.
+Com esse space-aroundvalor, os itens são distribuídos uniformemente dentro do contêiner de alinhamento. Cada item tem o mesmo espaço em ambos os lados, mas o espaço nas bordas inicial e final é metade do espaço entre dois itens adjacentes. Para ver isso em ação, altere o align-contentvalor de endpara space-around.
+Agora você vai verificar o último valor de alinhamento. Altere o align-contentvalor de space-aroundpara space-evenly.
+Com esse space-evenlyvalor, os itens são distribuídos uniformemente dentro do contêiner de alinhamento. O espaço entre todos os itens é exatamente o mesmo, incluindo o espaço no início e no fim.
+A flexpropriedade controla o tamanho e o comportamento dos itens dentro de um contêiner flexível. Ela é composta por três propriedades: flex-grow, flex-shrink, e flex-basis.
+A flex-growpropriedade controla quanto espaço extra o item flexível deve ocupar se houver espaço livre disponível no contêiner.
+Agora, voltando ao .boxseletor, altere o primeiro número em flex(correspondente ao flex-growvalor) de 1para 0.
+O segundo valor da flexpropriedade define a flex-shrinkpropriedade. Essa propriedade controla o quanto o item flexível irá encolher quando não houver espaço suficiente no contêiner para todos os itens.
+Ainda dentro do .boxseletor, altere o segundo valor de flexpara 1.0
+O último valor da flexpropriedade define a flex-basispropriedade. Essa propriedade define o tamanho inicial de um item flexível antes que ele aumente ou diminua de tamanho.
+Por fim, altere o último valor de flex`from` 100pxpara `to` 150pxdentro do seu .boxseletor.
+Voltando ao htmlarquivo, adicione a classe box1à primeira divcom a classe de box.
+Agora você vai organizar as caixas dentro do seu contêiner flexbox. Primeiro, crie um .box1seletor e adicione a ele a backgroundpropriedade com o valor #f16e79.
+Em seguida, adicione a propriedade ordercom o valor 1. Você verá a primeira caixa se mover para o final. Isso acontece porque a boxclasse já possui o ordervalor 0, e os itens com valores de ordem superior aparecem posteriormente.
+Adicione também a flex-growpropriedade com o valor 1. Isso fará com que a caixa cresça para preencher o espaço extra na linha.
+Voltando ao htmlarquivo, adicione a classe box2ao segundo .boxelemento.
+No seu htmlarquivo, adicione a classe box3ao terceiro .boxelemento.
+Agora, para continuar a estilizar suas caixas, crie um novo .box3seletor e adicione a backgroundpropriedade com o valor #ffd166desejado.
+Em seguida, adicione a orderpropriedade com o valor `to` 2ao seu novo seletor. Você verá essa caixa se mover para trás do .box1elemento.
+Adicione também a flex-shrinkpropriedade com o valor 3. Isso significa que esta caixa irá encolher três vezes mais que as outras caixas quando não houver espaço suficiente em sua linha.
+Dentro do htmlarquivo, adicione a classe box4ao seu quarto .boxelemento.
+Adicione a classe box5ao seu quinto .boxelemento.
+Agora crie um .box5seletor e adicione a backgroundpropriedade com o valor #457b9ddesejado.
+Em seguida, adicione a orderpropriedade com o valor `value` 4ao seu novo seletor. Você verá essa caixa se mover para depois daquela com a box4classe.
+Por fim, adicione a classe box6ao último dos seus .boxelementos.
+Crie um .box6seletor e adicione a backgroundpropriedade com o valor #3f51b5desejado.
+Em seguida, adicione a orderpropriedade com o valor `to` 5ao seu novo seletor. Você verá o .box6elemento se mover para trás do .box5elemento `<span>`.
+Adicione também a flex-growpropriedade com o valor 1. Isso fará com que a caixa 6 cresça para preencher qualquer espaço restante no contêiner.
+Com isso, a oficina de caixas coloridas está concluída!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Colored Boxes</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+		<h1>Colored Boxes Layout</h1>
+	</header>
+	<div class="flex-container">
+		<div class="box box1">
+			<h2>Box 1</h2>
+			<p>Red</p>
+		</div>
+		<div class="box box2">
+			<h2>Box 2</h2>
+			<p>Orange</p>
+		</div>
+		<div class="box box3">
+			<h2>Box 3</h2>
+			<p>Yellow</p>
+		</div>
+		<div class="box box4">
+			<h2>Box 4</h2>
+			<p>Green</p>
+		</div>
+		<div class="box box5">
+			<h2>Box 5</h2>
+			<p>Blue</p>
+		</div>
+		<div class="box box6">
+			<h2>Box 6</h2>
+			<p>Indigo</p>
+		</div>
+	</div>
+</body>
+</html>
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.box {
+  max-height: 120px;
+  color: #000;
+  border: 1px solid #000;
+  display: flex;
+  flex: 0 0 150px;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  order: 0; 
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 600px;
+  padding: 10px;
+  margin: 20px auto;
+  align-content: space-evenly;
+}
+
+.box1 {
+  background: #f16e79;
+  order: 1; 
+  flex-grow: 1;
+}
+
+.box2 {
+  background: #f4a261;
+  order: 0; 
+}
+
+.box3 {
+  background: #ffd166;
+  order: 2;
+  flex-shrink: 3; 
+}
+
+.box4 {
+  background: #4caf50;
+  order: 3; 
+}
+
+.box5 {
+  background: #457b9d;
+  order: 4;
+}
+
+.box6{
+  background:#3f51b5;
+  order:5;
+  flex-grow:1;
+}
