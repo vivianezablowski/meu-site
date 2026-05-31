@@ -1,0 +1,92 @@
+Comece este projeto vinculando seu styles.cssarquivo à página
+Adicione um headerelemento dentro do bodyelemento e atribua headera ele a classe "classe". Dentro do header, crie um h1com css flexbox photo gallerycomo texto.
+Abaixo do seu .headerelemento, crie um novo divelemento e atribua a ele um classvalor de gallery. Isso divservirá como um contêiner para as imagens da galeria.
+Abaixo do seu .headerelemento, crie um novo divelemento e atribua a ele um classvalor de gallery. Isso divservirá como um contêiner para as imagens da galeria.
+Dentro desse .galleryelemento, crie nove imgelementos.
+Em seguida, atribua a cada um imgum srcatributo de acordo com sua ordem no documento. O primeiro imgdeve ter um srcvalor de https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg. Os demais devem ser iguais, exceto que o valor de deve ser substituído 1pelo número em que o imgitem aparece no documento.
+Para visualizar melhor o tamanho dos seus elementos, adicionar uma borda pode ser útil.
+
+Atribua ao seu .galleryelemento um widthvalor de 50%e borderdefina-o como 5px solid red.
+
+Em seguida, atribua aos seus imgelementos um widthvalor de 100%, paddingdefina-o como 5px, e borderdefina-o como 5px solid blue.
+Observe como a borda azul da imagem se estende além da borda vermelha da galeria. Isso ocorre devido à forma como os navegadores calculam o tamanho dos elementos contêineres.
+
+Essa box-sizingpropriedade é usada para definir esse comportamento. Por padrão, o content-boxmodelo é usado. Com esse modelo, quando um elemento tem uma largura específica, essa largura é calculada com base apenas no conteúdo do elemento. Os valores de preenchimento (padding) e borda (border) são adicionados à largura total, de modo que o elemento cresce para acomodar esses valores.
+
+Tente definir box-sizingexplicitamente content-box, com o *seletor global. Nesse ponto, você não verá nenhuma alteração, pois está usando o valor padrão.
+O border-boxmodelo de dimensionamento faz o oposto do anterior content-box. A largura total do elemento, incluindo o preenchimento e a borda, será a largura definida explicitamente. O conteúdo do elemento será reduzido para dar espaço ao preenchimento e à borda.
+
+Altere a box-sizingpropriedade para border-box. Observe como as bordas azuis da sua imagem agora se encaixam dentro da borda vermelha da sua galeria.
+Agora que você já definiu sua box-sizingabordagem, pode limpar o CSS que adicionou para ver as alterações.
+
+Remova os .galleryseletores imge todas as regras internas.
+Agora suas imagens estão muito grandes.
+
+Crie um .gallery imgseletor para segmentá-los. Atribua a todos eles um ` widthid` 100%e um max-width`value` 350px.
+
+Defina também a heightpropriedade para 300pxmanter suas imagens com um tamanho uniforme.
+Agora suas imagens estão muito grandes.
+
+Crie um .gallery imgseletor para segmentá-los. Atribua a todos eles um ` widthid` 100%e um max-width`value` 350px.
+
+Defina também a heightpropriedade para 300pxmanter suas imagens com um tamanho uniforme.
+Remova a margem do seu elemento body, defina o valor de ` font-familymargin` como `true` sans-serife atribua a ele um background-colorvalor #f5f6f7de `true`
+Alinhe o .headertexto ao centro. Coloque o texto em maiúsculas usando a text-transformpropriedade com uppercaseo valor definido.
+
+Adicione um espaçamento interno de [valor] 32pxem todos os lados. Defina o fundo como [valor] #0a0a23e o texto como #fff[valor] para as cores.
+
+Adicione um border-bottomcom 4px solid #fdb347o valor.
+Flexbox é um layout CSS unidimensional que controla o espaçamento e o alinhamento dos itens dentro de um contêiner.
+
+Para utilizá-lo, atribua a um elemento a displaypropriedade ` flex-container` flex. Isso fará com que o elemento se torne um contêiner flexível . Quaisquer filhos diretos de um contêiner flexível são chamados de itens flexíveis .
+
+Crie um .galleryseletor e transforme-o em um contêiner flexível.
+O Flexbox possui um eixo principal e um eixo transversal. O eixo principal é definido pela flex-directionpropriedade `axis`, que possui quatro valores possíveis:
+
+row(padrão): eixo horizontal com itens flexíveis da esquerda para a direita
+row-reverseEixo horizontal com itens flexíveis da direita para a esquerda.
+columnEixo vertical com itens flexíveis de cima para baixo.
+column-reverse: eixo vertical com itens flexíveis de baixo para cima
+Nota : Os eixos e as direções serão diferentes dependendo da direção do texto. Os valores mostrados são para um texto da esquerda para a direita.
+
+Experimente com valores diferentes para ver como eles afetam o layout.
+
+Quando terminar, defina um flex-directionvalor explícito rowpara o .galleryelemento.
+Essa flex-wrappropriedade determina como seus itens flexíveis se comportam quando o contêiner flexível é muito pequeno. Definir como `true` wrappermitirá que os itens sejam quebrados para a próxima linha ou coluna. nowrapO valor padrão `false` impedirá que seus itens sejam quebrados e os reduzirá, se necessário.
+
+Configure seus itens flexíveis para que passem para a próxima linha quando ficarem sem espaço.
+Essa justify-contentpropriedade determina como os itens dentro de um contêiner flexível são posicionados ao longo do eixo principal, afetando sua posição e o espaço ao redor deles.
+
+Atribua ao seu .galleryseletor uma justify-contentpropriedade com centero valor especificado.
+A align-itemspropriedade posiciona o conteúdo flexível ao longo do eixo transversal. Nesse caso, com o flex-directionvalor definido como row, o eixo transversal seria vertical.
+
+Para centralizar suas imagens verticalmente, atribua ao seu .galleryseletor uma align-itemspropriedade com centero valor `vertical`.
+Atribua ao seu .galleryseletor uma paddingpropriedade que 20px 10pxcrie algum espaço ao redor do contêiner.
+
+Em seguida, dê um valor max-widthde 1400pxe adicione um marginvalor de 0 autopara centralizá-lo.
+Observe como algumas de suas imagens ficaram distorcidas. Isso ocorre porque as imagens têm proporções diferentes. Em vez de definir a proporção de cada uma individualmente, você pode usar a object-fitpropriedade para determinar como as imagens devem se comportar.
+
+Atribua .gallery imga propriedade ao seu seletor object-fite defina-a como cover. Isso instruirá a imagem a preencher o imgcontêiner, mantendo a proporção, resultando no recorte para ajustar à tela.
+Suas imagens precisam de algum espaço entre elas.
+
+A gappropriedade abreviada em CSS define os espaços, também conhecidos como espaçamento entre linhas e colunas. Essa gappropriedade e suas row-gapsubpropriedades column-gapfornecem essa funcionalidade para layouts flexíveis, de grade e de múltiplas colunas. Você aplica a propriedade ao elemento contêiner.
+
+Atribua ao seu .gallerycontêiner flexível uma gappropriedade com 16pxo valor especificado.
+Suavize um pouco suas imagens atribuindo ao .gallery imgseletor uma border-radiuspropriedade com 10pxo valor definido.
+O ::afterpseudo-elemento cria um elemento que é o último filho do elemento selecionado. Você pode usá-lo para adicionar um elemento vazio após a última imagem. Se você definir o mesmo valor para ele widthe para as imagens, a última imagem será deslocada para a esquerda quando a galeria estiver em um layout de duas colunas. No momento, ela está centralizada porque você definiu justify-content: centero valor do contêiner flexível.
+
+Exemplo:
+
+Código de exemplo
+.container::after {
+  content: "";
+  width: 860px;
+}
+Crie um novo seletor usando um ::afterpseudo-elemento no .galleryelemento. Adicione uma contentpropriedade definida como uma string vazia ""e 350pxdefina a widthpropriedade.
+
+O altatributo de imagem deve descrever o conteúdo da imagem. Leitores de tela anunciam o texto alternativo em vez das imagens. Se a imagem não puder ser carregada, esse texto será apresentado em seu lugar.
+
+Para concluir o projeto, adicione um altatributo a todas as nove imagens de gatos para descrevê-las. Use um valor com pelo menos cinco caracteres para cada uma.
+O altatributo de imagem deve descrever o conteúdo da imagem. Leitores de tela anunciam o texto alternativo em vez das imagens. Se a imagem não puder ser carregada, esse texto será apresentado em seu lugar.
+
+Para concluir o projeto, adicione um altatributo a todas as nove imagens de gatos para descrevê-las. Use um valor com pelo menos cinco caracteres para cada uma.
